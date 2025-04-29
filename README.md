@@ -17,7 +17,7 @@ Contains item-level transaction details:
 - **Sub-Category**
 - **Order ID**
 - **Payment Mode**
-- - **Amount**
+- **Amount**
 - **Profit**
 - **Quantity**
 
@@ -33,7 +33,7 @@ The relationship between the tables is managed through the `Order ID` field.
 
 ## 📐 Measures I Calculated
 - **Profit Margin %**
-- - **Revenue per Unit**
+- **Revenue per Unit**
 - **Total Orders**
 - **Total Revenue**
 
