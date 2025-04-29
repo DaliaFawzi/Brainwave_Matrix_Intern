@@ -1,0 +1,51 @@
+# Brainwave_Matrix_Intern
+this project is about Natural Language Process (NLP) in machine learning to analyze the sentiment of people for something.
+the data is sourced from kaggle 'https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis' , it is about 2 data set 
+one for training set and one for validation and testing.
+
+## 📊 Sentiment Analysis using NLP
+This project is a Sentiment Analysis using NLP designed to provide the feelings of people towards something using logistic Regression.
+
+📁 Data Sources
+
+This project uses two CSV files:
+
+###  `cleaned_twitter_training.csv`
+Contains details of:
+- **Tweer_ID**
+- **Entity**
+- **Sentiment**
+- **Tweet_Content**
+
+###  `cleaned_twitter_validation.csv`
+Contains details of:
+- **Tweer_ID**
+- **Entity**
+- **Sentiment**
+- **Tweet_Content**
+
+# First - Cleaning Data for both files
+import Required libraries such as 'import numpy as np,import pandas as pd,import seaborn as sns,import matplotlib.pyplot as plt
+import emoji,import re' 
+1- there is no headers in data so when reading file put ' headers = None' then put your headers 
+2- check if there is null values and this data has null values in 'Tweet_Cintent column' then handle it ( in this case i drop it as
+  the total of null values did not exceed 5% so there is no effect in data)
+3- check duplicates in this data there is a duplicated values then drop it 
+4- for validation data there are emojis in 'Tweet_Content Column' so we must remove it using emoji library
+
+# Second - Create (NLP) using Machine Learning Model
+import Required libraries such as 'from sklearn.model_selection import train_test_split,from sklearn.feature_extraction.text import TfidfVectorizer # convert each text_cell to number to reflect the interest of words
+from sklearn.svm import SVC,from sklearn.linear_model import LogisticRegression,from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import classification_report, accuracy_score # model accuracy using F1-score'
+1- Reading Cleaned Data 
+2- using label encoder to encode some data columns such as 'Entity and Sentiments' for both Training and validation data
+3- Prepare features'Tweet_Content' and target 'Sentiment'
+4- using TF-IDF Vectorization (fit on training, transform both)
+5- using logistic regression model to initialize and train the model
+6- Predict on validation data
+7- Evalution using Accuracy
+8- Examples
+
+## 🛠 Tools Used
+- **Python** for data cleaning and machine learning
+
